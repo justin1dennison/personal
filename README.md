@@ -1,1 +1,1 @@
-Theme: https://github.com/dofbi/astro-simple-blog-theme/
+Theme: https://github.com/JustGoodUI/dante-astro-theme/
