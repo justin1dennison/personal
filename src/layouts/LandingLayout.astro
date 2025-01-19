@@ -1,6 +1,10 @@
 ---
 import { ViewTransitions } from "astro:transitions";
 import BaseHead from "@components/BaseHead.astro";
+import MainContent from "@components/MainContent.astro";
+import Navigation from "@components/Navigation.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+
 interface Props {
   title: string;
 }
@@ -8,18 +12,11 @@ interface Props {
 const {title} = Astro.props;
 ---
 
-<!doctype html>
-<html lang="en" class="antialiased break-words">
-  <head>
-    <BaseHead {title} />
-    <script>
-      if (localStorage.theme === "dark") {
-        document.documentElement.classList.add("dark");
-      }
-    </script>
-    <ViewTransitions />
-  </head>
-  <body>
-    <slot />
-  </body>
-</html>
+<BaseLayout title={title}>
+  <div class="flex h-screen">
+    <Navigation />
+    <MainContent>
+      <slot />
+    </MainContent>
+  </div>
+</BaseLayout>
