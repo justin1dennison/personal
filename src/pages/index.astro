@@ -1,14 +1,15 @@
 ---
 import LandingLayout from "@layouts/LandingLayout.astro";
-
-const baseUrl = import.meta.env.BASE_URL;
+import Navigation from "@components/Navigation.astro";
 ---
 
 <LandingLayout title="Who is Justin Dennison?">
-  <main>
-    <h1>Welcome to <span class="text-gradient">JD's</span> page.</h1>
-  </main>
-  <ul>
-    <li><a href={`${baseUrl}/posts`}>Blog Posts</a></li>
-  </ul>
+  <section>
+    <Navigation /> 
+  </section>
+  <section>
+    <header></header>
+    <main></main>
+    <footer></footer>
+  </section> 
 </LandingLayout>
