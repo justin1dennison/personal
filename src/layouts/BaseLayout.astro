@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 import BaseHead from "@components/BaseHead.astro";
 interface Props {
   title: string;
@@ -15,7 +15,7 @@ interface Props {
         document.documentElement.classList.add("dark");
       }
     </script>
-    <ViewTransitions />
+    <ClientRouter />
   </head>
   <body class="bg-gray-100">
     <slot />
