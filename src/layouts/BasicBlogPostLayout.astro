@@ -1,14 +1,14 @@
 ---
 import PageLayout from './LandingLayout.astro';
+
 interface Props {
   title: string;
 }
 
-
 const { title } = Astro.props;
 ---
 
-<PageLayout>
+<PageLayout title={title}>
     <article class="blog-post">
         <header class="mb-8">
             <h1 class="text-4xl font-bold text-gray-900">{title}</h1>
