@@ -1,5 +1,5 @@
 ---
-import LandingLayout from "@layouts/LandingLayout.astro";
+import Layout from "@layouts/BasicBlogPostLayout.astro";
 import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
@@ -16,10 +16,7 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 
-<LandingLayout title="Posts">
-  <main>
-    <h1>{entry.data.title}</h1>
+<Layout title={entry.data.title}>
     <Content />   
-  </main>
-</LandingLayout>
+</Layout>
 
