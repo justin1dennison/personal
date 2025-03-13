@@ -1,5 +1,11 @@
 ---
 import LandingLayout from "@layouts/LandingLayout.astro";
+import { getCollection } from "astro:content";
+const postEntries = await getCollection("posts", ({ data }) => {
+  return import.meta.env.PROD ? data.draft !== true : true;
+});
+const baseUrl = import.meta.env.BASE_URL;
+
 ---
 
 <LandingLayout title={"JD"}>
