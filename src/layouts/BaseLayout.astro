@@ -4,12 +4,15 @@ import BaseHead from "@components/BaseHead.astro";
 interface Props {
   title: string;
 }
+
+const { title } = Astro.props
+
 ---
 
 <!doctype html>
 <html lang="en" class="antialiased break-words">
   <head>
-    <BaseHead title="Justin's Landing Page" />
+    <BaseHead title={title} />
     <script>
       if (localStorage.theme === "dark") {
         document.documentElement.classList.add("dark");
