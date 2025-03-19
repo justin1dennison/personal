@@ -4,4 +4,4 @@ tags: []
 draft: true
 ---
 
-I have recently been drinking a delightful cold brew: Stok. 
+I have recently been drinking a delightful cold brew: Stok.

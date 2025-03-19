@@ -1,5 +1,5 @@
 ---
-import PageLayout from './LandingLayout.astro';
+import PageLayout from "./LandingLayout.astro";
 
 interface Props {
   title: string;
@@ -9,13 +9,13 @@ const { title } = Astro.props;
 ---
 
 <PageLayout title={title}>
-    <article class="blog-post">
-        <header class="mb-8">
-            <h1 class="text-4xl font-bold text-gray-900">{title}</h1>
-        </header>
-        
-        <div class="prose prose-lg max-w-none bg-white rounded-lg shadow-md p-8">
-            <slot />
-        </div>
-    </article>
+  <article class="blog-post">
+    <header class="mb-8">
+      <h1 class="text-4xl font-bold text-gray-900">{title}</h1>
+    </header>
+
+    <div class="prose prose-lg max-w-none bg-white rounded-lg shadow-md p-8">
+      <slot />
+    </div>
+  </article>
 </PageLayout>
