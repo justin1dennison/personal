@@ -7,7 +7,7 @@ filename="${dt}.md"
 path="./src/content/journal/${filename}"
 template=$(cat <<TEMPLATE
 ---
-title: ${dt}
+title: '${dt}'
 tags: []
 draft: true
 ---
